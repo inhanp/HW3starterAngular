@@ -12,7 +12,7 @@ import {PARecord} from '../_models/PARecord';
 export class PArecordService {
   constructor(private http: HttpClient, private auth: AuthService) { }
   fetch() {
-    this.http.get();
+    // PARecord[] = this.http.get();
   }
   //TODO: write a function that will fetch 'PArecord[]' from the server. Hint: use HttpClient's 'get()'.
 

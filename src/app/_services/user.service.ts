@@ -13,11 +13,12 @@ import {Observable} from 'rxjs';
 export class UserService {
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  //getAll(): Observable<User[]> {
+  getAll(): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:3030/user/allusers.json');
    // TODO: get 'all users' so that the admin component can display them in a list.
-  //}
+  }
 
 
 

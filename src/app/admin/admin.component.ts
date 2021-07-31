@@ -6,11 +6,14 @@ import { UserService } from '../_services/user.service';
 
 @Component({ templateUrl: 'admin.component.html' })
 export class AdminComponent implements OnInit {
-
-  //TODO: this component must show a list of registered users.
+  service: UserService;
+  list: User[] = [];
+  // TODO: this component must show a list of registered users.
 
   constructor() { }
-
   ngOnInit() {
+    this.service.getAll().subscribe((users: User[]) => {
+      this.list = users;
+    });
    }
 }
